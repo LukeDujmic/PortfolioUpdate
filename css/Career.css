@@ -1,0 +1,403 @@
+
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+
+
+@media only screen and (max-width: 799px)
+{
+
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 153, 255, 0.411);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 60%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+    width: 55%;
+    font-size: 2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+    left: 40%;
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 90%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+article > h5
+{
+    display: block;
+    position: relative;
+    width: 80%;
+    text-align: center;
+    font-size: 1.75em;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+    text-shadow: rgb(0, 255, 242) 0px 5px 10px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+article > hr
+{
+    border: solid 3px rgb(0, 0, 0);
+    width: 80%;
+    margin-top: 40px;
+    border-radius: 100px;
+    box-shadow: rgb(0, 255, 242) 0px 0px 10px;
+}
+
+article > p
+{
+    background-color:rgb(51, 71, 255);
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+    box-shadow: rgb(0, 255, 242) 0px 0px 10px;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+}
+
+
+
+{
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px)
+{
+/* Header */
+header 
+{
+    background-color: rgba(0, 29, 32, 0.5);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 60%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+    width: 55%;
+    font-size: 2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+    left: 40%;
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+article > h5
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    font-size: 1.75em;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+    text-shadow: rgb(0, 255, 242) 0px 5px 10px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+article > hr
+{
+    border: solid 3px rgb(0, 0, 0);
+    width: 80%;
+    margin-top: 40px;
+    border-radius: 100px;
+    box-shadow: rgb(0, 255, 242) 0px 0px 20px;
+}
+
+article > p
+{
+    background-color:rgb(51, 71, 255);
+    border-radius: 5px;
+    margin: auto;
+    width: 70%;
+    box-shadow: rgb(0, 255, 242) 0px 0px 20px;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 30px;
+    text-shadow: black 1px 2px 1px;
+}
+}
+
+{
+
+}
+@media only screen and (min-width: 1200px)
+{
+/* Header */
+header 
+{
+    background-color: rgba(0, 29, 32, 0.5);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 60%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    top: 40px;
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+    width: 55%;
+    font-size: 2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    max-width: 1710px;
+    margin: auto;
+    padding-bottom: 200px;
+    box-shadow: black 0px 0px 15px;
+    background: linear-gradient(to right, rgb(0, 23, 126), rgb(0, 97, 126),rgb(0, 23, 126));
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    margin: auto;
+    padding-top: 10px;
+    
+}
+
+article > h5
+{
+    display: block;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    font-size: 1.75em;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+    text-shadow: rgb(0, 255, 242) 0px 5px 10px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+article > hr
+{
+    border: solid 3px rgb(0, 0, 0);
+    width: 80%;
+    margin-top: 40px;
+    border-radius: 100px;
+    box-shadow: rgb(0, 255, 242) 0px 0px 20px;
+}
+
+article > p
+{
+    background-color:rgb(51, 71, 255);
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+    box-shadow: rgb(0, 255, 242) 0px 0px 20px;
+    color: white;
+    font-size: 1.75em;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 40px;
+    text-shadow: black 1px 2px 1px;
+}
+}

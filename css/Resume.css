@@ -1,0 +1,428 @@
+
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+
+
+@media only screen and (max-width: 799px)
+{
+
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 153, 255, 0.411);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 60%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+    width: 55%;
+    font-size: 2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+    left: 40%;
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 90%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    margin-top: 10px;
+}
+
+article > div#Resume
+{
+    background-color: rgba(0, 255, 213, 0.432);
+    margin: 15px;
+    padding: 15px;
+    color: white;
+}
+
+article > div#Resume > h3
+{
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) 0px 1px 2px;
+}
+
+article > div#Resume > h5
+{
+    font-size: 115%;
+    margin: 5px;
+
+}
+
+article > div#Resume > p
+{
+    margin: 10px;
+}
+
+article > div#Resume > ul
+{
+    list-style-type: disc;
+    margin: 15px;
+}
+
+article > div#Resume > ul > li
+{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+}
+
+
+
+{
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px)
+{
+
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 29, 32, 0.5);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 60%;
+    font-size: 5em;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: 5;
+    text-shadow: black 0px 10px 10px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+    transform: translate(40px, 30px);
+
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+
+    font-size: 3em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 10px;
+    text-align: center;
+
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 90%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+article > div#Resume
+{
+    background-color: rgba(255, 255, 255, 0.432);
+    margin: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: black 0px 5px 20px, rgb(155, 252, 255) 0px 0px 100px;
+}
+
+article > div#Resume > h3
+{
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow: white 0px 1px 2px;
+    text-align: center;
+    
+}
+
+article > div#Resume > h5
+{
+    font-size: 115%;
+    margin: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+article > div#Resume > p
+{
+    margin: 10px;
+    text-align: center;
+}
+
+article > div#Resume > ul
+{
+    list-style-type: disc;
+    margin: 15px;
+}
+
+article > div#Resume > ul > li
+{
+    margin-bottom: 10px;
+}
+}
+
+
+{
+
+}
+
+@media only screen and (min-width: 1200px)
+{
+
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 29, 32, 0.5);
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 40%;
+    font-size: 5em;
+    padding-top: 15px;
+    padding-left: 15px;
+    z-index: 5;
+    text-shadow: black 0px 10px 10px;
+}
+
+header > div
+{
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    font-size: 5em;
+    z-index: 5;
+    transform: translate(-20px, 30px);
+}
+
+header > div > img
+{
+    width: 100px;
+    position: relative;
+
+
+}
+
+
+header > h2
+{
+    display: block;
+    position: relative;
+    color: rgb(135, 177, 180);
+
+    font-size: 3em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 10px;
+
+}
+
+
+
+
+
+/* content area */
+
+article
+{
+    height: auto;
+    display: block;
+    position: relative;
+    max-width: 1710px;
+    margin: auto;
+    padding-bottom: 200px;
+    box-shadow: black 0px 0px 15px;
+    background: linear-gradient(to right, rgb(0, 23, 126), rgb(0, 97, 126),rgb(0, 23, 126));
+}
+
+article > h3
+{
+    display: block;
+    position: relative;
+    width: 90%;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 251, 255);
+    z-index: 5;
+    text-shadow: rgb(255, 255, 255) 0px 5px 10px;
+    
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+article > div#Resume
+{
+    background-color: rgba(255, 255, 255, 0.432);
+    margin: 150px;
+    margin-top: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: black 0px 5px 20px, rgb(155, 252, 255) 0px 0px 100px;
+}
+
+article > div#Resume > h3
+{
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: white 0px 1px 2px;
+    text-align: center;
+    
+}
+
+article > div#Resume > h5
+{
+    font-size: 145%;
+    margin: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+article > div#Resume > p
+{
+    margin: 10px;
+    text-align: center;
+    font-size: 120%;
+}
+
+article > div#Resume > ul
+{
+    list-style-type: disc;
+    margin: 15px;
+}
+
+article > div#Resume > ul > li
+{
+    margin-bottom: 10px;
+    font-size: 120%;
+}
+}

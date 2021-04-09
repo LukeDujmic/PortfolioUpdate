@@ -1,0 +1,8175 @@
+
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+
+@font-face
+{
+    font-family: 'Sung';
+    src: url(../fonts/YeonSung-Regular.ttf);
+}
+
+@media only screen and (max-width: 799px)
+{
+/* Grid Layouts */
+#outer-grid 
+{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    overflow-wrap: break-word;
+}
+
+/*#inner-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+#inner-grid > div 
+{
+    background: lightgreen;
+    padding: 8px;
+}*/
+header
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+nav
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#content
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+}
+footer
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+
+html
+{
+    font-family: 'Sung';
+    overflow-x: hidden;
+}
+body
+{
+    background-color: rgb(15, 41, 156);
+    font-family: 'Sung';
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 2.2%;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgb(0, 0, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(2, 0, 119); 
+    border-radius: 10px;
+    border: white solid 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0026ff; 
+  }
+  
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+/* HUGE NAVIGATION AREA */
+nav
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(13, 58, 141);
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 5;
+    box-shadow: rgb(0, 112, 116) 0px 15px 50px;
+}
+
+
+
+#expandNav
+{
+    position: relative;
+    /*top: 150px;*/
+    align-self: center;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 1s;
+    border-radius: 50%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    
+    
+}
+
+#expandNav:hover
+{
+    width: 500px;
+    height: 500px;
+    transition: 1s;
+}
+
+.center
+{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div#cluster
+{
+    position: relative;
+    background-color: rgba(0, 103, 163, 0.247);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+
+    z-index: 5;
+}
+
+#expandNav:hover > div#cluster
+{
+    background-color: rgba(255, 255, 255, 0.466);
+    height: 150px;
+    width: 150px;
+}
+
+/* Home button */
+#expandNav > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 2px;
+    width: 5px;
+    border-radius: 5%;
+    transition: 1s;
+    z-index: 4;
+    
+
+}
+
+/*Navigation Hover text*/
+#expandNav > p
+{
+    position: absolute;
+    font-size: 50px;
+    z-index: 100;
+    transition: 2s;
+    color: white;
+}
+
+#expandNav:hover > p
+{
+    position: absolute;
+    font-size: 1px;
+    filter: opacity(0);
+    z-index: 1;
+    transition: 1s;
+    color: white;
+}
+
+#expandNav:hover > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 22px;
+    width: 55px;
+    border-radius: 5px;
+    transition: 0.5s;
+    z-index: 4;
+
+
+}
+
+#expandNav:hover > div#cluster > a > div#home:hover
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 28px;
+    width: 80px;
+    
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 4;
+    box-shadow: white 0px 0px 10px;
+
+}
+
+#expandNav > div#cluster > a > div#home > p
+{
+    filter: opacity(0%);
+    position: relative;
+    text-align: center;
+    font-size: 1%;
+    transition: 1s;
+}
+
+#expandNav:hover > div#cluster > a > div#home > p
+{
+    filter: opacity(100%);
+    transition: 1.25s;
+    font-size: 150%;
+    color: white;
+}
+
+/* Navigation buttons in hidden form */
+
+#expandNav > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+    
+
+}
+
+#expandNav > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#five 
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+/* Navigation Text in hidden form*/
+#expandNav > div#cluster > a > div#one > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#two > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#three > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#four > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#five > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#six > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+/* Navigation buttons on hover */
+
+#expandNav:hover > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(90, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, -125px);
+}
+
+#expandNav:hover > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(99, 99, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(75px, -25px);
+}
+
+#expandNav:hover > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 95, 6);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 58, 100);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#five
+{
+    position: absolute;
+    background-color: rgb(12, 0, 104);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-225px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(92, 0, 99);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, -125px);
+}
+
+/* navigation text on hover */
+#expandNav:hover > div#cluster > a > div#one > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#two > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#three > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#four > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#five > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#six > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+/* navigation circles in the center in hidden form */
+
+#expandNav > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+/* navigation circles on hover */
+
+#expandNav:hover > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, -50px);
+
+}
+
+#expandNav:hover > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(0px, -25px);
+}
+
+#expandNav:hover > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-50px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, -50px);
+
+}
+/* navigation branches connecting the circles and the buttons in hidden form */
+#expandNav > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-12deg);
+}
+
+#expandNav > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+
+#expandNav > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(12deg);
+}
+
+#expandNav > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+/* navigation branches on hover */
+#expandNav:hover > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-12.5px, -75px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(25px, -15px) rotateZ(-12deg);
+}
+
+#expandNav:hover > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-10px, 50px) rotateZ(60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-90px, 50px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-125px, -15px) rotateZ(12deg);
+
+}
+
+#expandNav:hover > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: rotateZ(60deg) translate(-100px, 37.5px);
+}
+/* Navigation buttons when hovering over the button */
+#expandNav:hover > div#cluster > a > div#one:hover
+{
+    position: absolute;
+    background-color: rgb(136, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover
+{
+    position: absolute;
+    background-color: rgb(136, 136, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(90px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover
+{
+    position: absolute;
+    background-color: rgb(0, 136, 9);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover
+{
+    position: absolute;
+    background-color: rgb(0, 79, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover
+{
+    position: absolute;
+    background-color: rgb(16, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-240px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover
+{
+    position: absolute;
+    background-color: rgb(127, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+/* navigation text when hovering over the button */
+
+#expandNav:hover > div#cluster > a > div#one:hover > p
+{
+    color: rgb(255, 255, 255);
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover > p
+{
+    color: rgb(255, 255, 255); 
+
+}
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 153, 255, 0.411);
+    height: 525px;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+h1
+{
+    display: block;
+    position: relative;
+    color: white;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-indent: 10px;
+    text-shadow: black 0px 5px 5px;
+}
+
+/* bubble effect */
+div#cloud1
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 50px 50px 0px;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(174, 246, 255);
+    z-index: 3;
+    left: -75px;
+    top: 25px;
+    box-shadow: black 0px 3px 10px;
+}
+div#cloud2
+{
+    position: absolute;
+    display: block;
+    border-radius: 0 100px 100px 0px;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(135, 130, 230);
+    z-index: 3;
+    left: -250px;
+    top: 75px;
+    box-shadow: black 0px 3px 10px;
+}
+div#cloud3
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 50px 50px 0px;
+    width: 245px;
+    height: 75px;
+    background-color: rgb(99, 93, 207);
+    z-index: 3;
+    left: -50px;
+    top: 50px;
+    box-shadow: black 0px 3px 10px;
+}
+div#cloud4
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 335px;
+    height: 200px;
+    background-color: rgb(71, 65, 187);
+    z-index: 3;
+    left: -5px;
+    top: 125px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud5
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 255px;
+    height: 20px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: -5px;
+    top: 200px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud6
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(149, 146, 233);
+    z-index: 3;
+    left: -5px;
+    top: 300px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud7
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 175px;
+    height: 75px;
+    background-color: rgb(10, 0, 190);
+    z-index: 3;
+    left: -5px;
+    top: 400px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud8
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 350px;
+    height: 50px;
+    background-color: rgb(188, 184, 255);
+    z-index: 3;
+    left: -5px;
+    top: 450px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud9
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 250px;
+    height: 125px;
+    background-color: rgb(135, 129, 255);
+    z-index: 3;
+    left: -5px;
+    top: 250px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud10
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 425px;
+    height: 125px;
+    background-color: rgb(64, 55, 230);
+    z-index: 3;
+    left: -5px;
+    top: 325px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud11
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 225px;
+    height: 50px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: -5px;
+    top: 300px;
+    box-shadow: black 0px 3px 10px;
+}
+
+div#cloud12
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 50px;
+    height: 125px;
+    background-color: rgb(59, 49, 255);
+    z-index: 3;
+    left: -5px;
+    top: 150px;
+    box-shadow: black 0px 3px 10px;
+}
+div#cloud13
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 475px;
+    height: 100px;
+    background-color: rgb(121, 113, 255);
+    z-index: 3;
+    left: -5px;
+    top: 125px;
+    box-shadow: black 0px 3px 10px;
+}
+div#cloud14
+{
+    position: absolute;
+    display: block;
+    border-radius: 0px 500px 500px 0px;
+    width: 475px;
+    height: 20px;
+    background-color: rgb(51, 41, 255);
+    z-index: 3;
+    left: -5px;
+    top: 5px;
+    box-shadow: black 0px 3px 10px;
+}
+
+
+
+h2
+{
+    display: block;
+    position: relative;
+    color: rgb(195, 251, 255);
+    left: 10%;
+    width: 100%;
+    font-size: 4em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+article.introContent > h2
+{
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    width: 1px;
+}
+
+article.introContent > p
+{
+    position: absolute;
+    font-size: 2em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    margin: 25px 25px 0px 25px;
+    border-radius: 25px;
+    padding: 10px;
+    z-index: 2;
+    
+}
+
+article.introContent > p:nth-of-type(2)
+{
+    position: relative;
+    font-size: 2em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    top: -150px;
+    border-radius: 25px;
+    padding: 10px;
+    z-index: 2;
+    
+}
+
+article.introContent > div#pill1
+{
+    position: relative;
+    display: block;
+    left: 50px;
+    top: -37.5px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+}
+article.introContent > div#pill2
+{
+    position: relative;
+    display: block;
+    left: 100px;
+    top: -100px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+}
+article.introContent > div#pill3
+{
+    position: relative;
+    display: block;
+    left: 150px;
+    top: -150px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+}
+article.introContent > div#pill4
+{
+    position: relative;
+    display: block;
+    left: 200px;
+    top: -217.5px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+}
+
+footer > #shadeBar
+{
+    width: 100%;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -55px;
+    height: 100px;
+    box-shadow: rgb(0, 3, 34) -50px -50px 50px, rgb(0, 3, 34) 50px -50px 50px;
+    background-color: rgb(0, 3, 34);
+}
+
+footer > .stars
+{
+    border-radius: 50%;
+    background-color: white;
+    
+    position: absolute;
+    z-index: 3;
+
+    
+}
+footer > #star1
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 1%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star2
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 2%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star3
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 3%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star4
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 3%;
+}
+footer > #star5
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 4%;
+}
+footer > #star6
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 5%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star7
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 9%;
+}
+footer > #star8
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 11%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star9
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 12%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star10
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 15%;
+}
+footer > #star11
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 17%;
+}
+footer > #star12
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 19%;
+}
+footer > #star13
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 21%;
+}
+footer > #star14
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 22%;
+}
+footer > #star15
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 25%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star16
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 27%;
+}
+footer > #star17
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 28%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star18
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 29%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star19
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 32%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star20
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 35%;
+}
+footer > #star21
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 35%;
+    
+}
+footer > #star22
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 36%;
+}
+footer > #star23
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 37%;
+}
+footer > #star24
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 39%;
+}
+footer > #star25
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 41%;
+}
+footer > #star26
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 43%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star27
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 45%;
+}
+footer > #star28
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 46%;
+}
+footer > #star29
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 47%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star30
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 48%;
+}
+footer > #star31
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 50%;
+}
+footer > #star32
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 52%;
+}
+footer > #star33
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 53%;
+}
+footer > #star34
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 54%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star35
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 55%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star36
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 56%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star37
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 58%;
+}
+footer > #star38
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 59%;
+}
+footer > #star39
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 60%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star40
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 60%;
+}
+footer > #star41
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 61%;
+}
+footer > #star42
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 63%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star43
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 64%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star44
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 65%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star45
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 66%;
+}
+footer > #star46
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 67%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star47
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 68%;
+}
+footer > #star48
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 70%;
+}
+footer > #star49
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 71%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star50
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 72%;
+}
+footer > #star51
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 73%;
+    
+}
+footer > #star52
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 75%;
+}
+footer > #star53
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 76%;
+}
+footer > #star54
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 77%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star55
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 79%;
+}
+footer > #star56
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 80%;
+}
+footer > #star57
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 81%;
+}
+footer > #star58
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 82%;
+}
+footer > #star59
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 83%;
+}
+footer > #star60
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 85%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star61
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 86%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star62
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 87%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star63
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 89%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star64
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 90%;
+}
+footer > #star65
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 91%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star66
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 90%;
+}
+footer > #star67
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 90%;
+    background-color: rgb(206, 255, 210);
+}
+footer > #star68
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 91%;
+    background-color: rgb(194, 255, 255)2);
+}
+footer > #star69
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 92%;
+}
+footer > #star70
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 93%;
+    background-color: rgb(255, 199, 252);
+}
+
+footer
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: rgb(0, 3, 34);
+    z-index: 2;
+    height: auto;
+    box-shadow: rgb(0, 3, 34) 0px -100px 100px;
+    padding-top: 10px;
+    padding-bottom: 110px;
+}
+
+footer > h1
+{
+    font-size: 200%;
+    color: white;
+}
+
+footer > a 
+{
+    z-index: 3;
+    padding-right: 10%;
+    padding: 25px;
+}
+
+
+
+
+
+}
+
+
+
+{
+
+}
+
+
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1199px)
+{
+/* Grid Layouts */
+#outer-grid 
+{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    overflow-wrap: break-word;
+}
+
+/*#inner-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+#inner-grid > div 
+{
+    background: lightgreen;
+    padding: 8px;
+}*/
+header
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+nav
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#content
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+}
+footer
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+
+html
+{
+    font-family: 'Sung';
+    overflow-x: hidden;
+}
+body
+{
+    /*background-color: rgb(0, 23, 126);*/
+    background: linear-gradient(to right, rgb(0, 23, 126), rgb(0, 97, 126),rgb(0, 23, 126));
+    font-family: 'Sung';
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 1.9%;
+    background: #00137e; 
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgb(0, 0, 0); 
+    border-radius: 30px;
+    background: #012f74; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(2, 0, 119); 
+    border-radius: 30px;
+    border: white solid 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0026ff; 
+  }
+  
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+/* HUGE NAVIGATION AREA */
+nav
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(6, 0, 90);
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 5;
+    box-shadow: rgb(0, 0, 0) 0px 15px 50px;
+}
+
+
+
+#expandNav
+{
+    position: relative;
+    /*top: 150px;*/
+    align-self: center;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 1s;
+    border-radius: 50%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    
+    
+}
+
+#expandNav:hover
+{
+    width: 500px;
+    height: 500px;
+    /*top: 50px;*/
+    transition: 1s;
+}
+
+.center
+{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div#cluster
+{
+    position: relative;
+    background-color: rgba(0, 103, 163, 0.247);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+
+    z-index: 5;
+}
+
+#expandNav:hover > div#cluster
+{
+    background-color: rgba(255, 255, 255, 0.466);
+    height: 150px;
+    width: 150px;
+}
+
+/* Home button */
+#expandNav > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 2px;
+    width: 5px;
+    border-radius: 5%;
+    transition: 1s;
+    z-index: 4;
+    
+
+}
+
+
+#expandNav > p
+{
+    position: absolute;
+    font-size: 50px;
+    z-index: 100;
+    transition: 2s;
+    color: white;
+}
+
+#expandNav:hover > p
+{
+    position: absolute;
+    font-size: 1px;
+    filter: opacity(0);
+    z-index: 1;
+    transition: 1s;
+    color: white;
+}
+
+#expandNav:hover > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 22px;
+    width: 55px;
+    border-radius: 5%;
+    transition: 0.5s;
+    z-index: 4;
+
+
+}
+
+#expandNav:hover > div#cluster > a > div#home:hover
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 28px;
+    width: 80px;
+    
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 4;
+    box-shadow: white 0px 0px 10px;
+
+}
+
+#expandNav > div#cluster > a > div#home > p
+{
+    filter: opacity(0%);
+    position: relative;
+    text-align: center;
+    font-size: 1%;
+    transition: 1s;
+}
+
+#expandNav:hover > div#cluster > a > div#home > p
+{
+    filter: opacity(100%);
+    transition: 1.25s;
+    font-size: 150%;
+    color: white;
+}
+
+/* */
+
+#expandNav > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+    
+
+}
+
+#expandNav > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#five 
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+
+#expandNav > div#cluster > a > div#one > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#two > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#three > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#four > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#five > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#six > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+
+
+#expandNav:hover > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, -125px);
+}
+
+#expandNav:hover > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(75px, -25px);
+}
+
+#expandNav:hover > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#five
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-225px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, -125px);
+}
+
+
+#expandNav:hover > div#cluster > a > div#one > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#two > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#three > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#four > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#five > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#six > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+
+#expandNav > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+
+#expandNav:hover > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, -50px);
+
+}
+
+#expandNav:hover > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(0px, -25px);
+}
+
+#expandNav:hover > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-50px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, -50px);
+
+}
+
+#expandNav > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-12deg);
+}
+
+#expandNav > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+
+#expandNav > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(12deg);
+}
+
+#expandNav > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-12.5px, -75px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(25px, -15px) rotateZ(-12deg);
+}
+
+#expandNav:hover > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-10px, 50px) rotateZ(60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-90px, 50px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-125px, -15px) rotateZ(12deg);
+
+}
+
+#expandNav:hover > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: rotateZ(60deg) translate(-100px, 37.5px);
+}
+
+#expandNav:hover > div#cluster > a > div#one:hover
+{
+    position: absolute;
+    background-color: rgb(136, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover
+{
+    position: absolute;
+    background-color: rgb(136, 136, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(90px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover
+{
+    position: absolute;
+    background-color: rgb(0, 136, 9);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover
+{
+    position: absolute;
+    background-color: rgb(0, 79, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover
+{
+    position: absolute;
+    background-color: rgb(16, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-240px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover
+{
+    position: absolute;
+    background-color: rgb(127, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+
+#expandNav:hover > div#cluster > a > div#one:hover > p
+{
+    color: rgb(255, 255, 255);
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover > p
+{
+    color: rgb(255, 255, 255); 
+
+}
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 0, 0, 0.192);
+    height: 500px;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+}
+
+h1
+{
+    display: block;
+    position: relative;
+    color: white;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-indent: 10px;
+    text-shadow: black 0px 5px 5px;
+}
+div#cloud1
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(123, 116, 255);
+    z-index: 3;
+    left: -25px;
+    top: -75px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud2
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(73, 64, 255);
+    z-index: 3;
+    left: -250px;
+    top: 75px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud3
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(75, 65, 255);
+    z-index: 3;
+    left: 200px;
+    top: 0px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud4
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 150px;
+    top: 125px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud5
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 225px;
+    top: -325px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud6
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(69, 59, 255);
+    z-index: 3;
+    left: 450px;
+    top: 300px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud7
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 325px;
+    top: 400px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud8
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(133, 126, 255);
+    z-index: 3;
+    left: 195px;
+    top: 450px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud9
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(135, 129, 255);
+    z-index: 3;
+    left: 350px;
+    top: 250px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud10
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 175px;
+    top: 325px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud11
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 625px;
+    top: 300px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud12
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(59, 49, 255);
+    z-index: 3;
+    left: 600px;
+    top: 150px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud13
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(121, 113, 255);
+    z-index: 3;
+    left: 475px;
+    top: 125px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud14
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 62.5px;
+    height: 62.5px;
+    background-color: rgb(51, 41, 255);
+    z-index: 3;
+    left: 775px;
+    top: 75px;
+    box-shadow: black 0px 5px 30px;
+}
+
+
+article.introContent
+{
+    position: relative;
+    margin-bottom: 50px;
+    
+}
+
+h2
+{
+    display: block;
+    position: relative;
+    color: rgb(195, 251, 255);
+    left: 10%;
+    width: 100%;
+    font-size: 4em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+article.introContent > h2
+{
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px;
+    padding-top: 20px;
+    width: 1px;
+}
+
+article.introContent > p
+{
+    position: absolute;
+    font-size: 2.5em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    margin: 50px 50px 25px 50px;
+    border-radius: 25px;
+    padding: 30px;
+    z-index: 2;
+    text-shadow: black 1px 2px 1px;
+}
+
+article.introContent > p:nth-of-type(2)
+{
+    position: relative;
+    font-size: 2.5em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    top: -150px;
+    border-radius: 25px;
+    padding: 30px;
+    z-index: 2;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+article.introContent > div#pill1
+{
+    position: relative;
+    display: block;
+    left: 50px;
+    top: 0px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill2
+{
+    position: relative;
+    display: block;
+    left: 100px;
+    top: -60px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill3
+{
+    position: relative;
+    display: block;
+    left: 150px;
+    top: -120px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill4
+{
+    position: relative;
+    display: block;
+    left: 200px;
+    top: -190px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+
+
+
+
+
+footer > #shadeBar
+{
+    width: 100%;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -95px;
+    height: 100px;
+    box-shadow: black -50px -50px 50px, black 50px -50px 50px;
+    background-color: black;
+}
+
+footer > .stars
+{
+    border-radius: 50%;
+    background-color: white;
+    
+    position: absolute;
+    z-index: 3;
+
+    
+}
+footer > #star1
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 1%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star2
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 2%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star3
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 3%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star4
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 3%;
+}
+footer > #star5
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 4%;
+}
+footer > #star6
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 5%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star7
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 9%;
+}
+footer > #star8
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 11%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star9
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 12%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star10
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 15%;
+}
+footer > #star11
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 17%;
+}
+footer > #star12
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 19%;
+}
+footer > #star13
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 21%;
+}
+footer > #star14
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 22%;
+}
+footer > #star15
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 25%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star16
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 27%;
+}
+footer > #star17
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 28%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star18
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 29%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star19
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 32%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star20
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 35%;
+}
+footer > #star21
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 35%;
+    
+}
+footer > #star22
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 36%;
+}
+footer > #star23
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 37%;
+}
+footer > #star24
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 39%;
+}
+footer > #star25
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 41%;
+}
+footer > #star26
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 43%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star27
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 45%;
+}
+footer > #star28
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 46%;
+}
+footer > #star29
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 47%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star30
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 48%;
+}
+footer > #star31
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 50%;
+}
+footer > #star32
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 52%;
+}
+footer > #star33
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 53%;
+}
+footer > #star34
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 54%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star35
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 55%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star36
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 56%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star37
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 58%;
+}
+footer > #star38
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 59%;
+}
+footer > #star39
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 60%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star40
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 60%;
+}
+footer > #star41
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 61%;
+}
+footer > #star42
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 63%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star43
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 64%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star44
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 65%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star45
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 66%;
+}
+footer > #star46
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 67%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star47
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 68%;
+}
+footer > #star48
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 70%;
+}
+footer > #star49
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 71%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star50
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 72%;
+}
+footer > #star51
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 73%;
+    
+}
+footer > #star52
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 75%;
+}
+footer > #star53
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 76%;
+}
+footer > #star54
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 77%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star55
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 79%;
+}
+footer > #star56
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 80%;
+}
+footer > #star57
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 81%;
+}
+footer > #star58
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 82%;
+}
+footer > #star59
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 83%;
+}
+footer > #star60
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 85%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star61
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 86%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star62
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 87%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star63
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 89%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star64
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 90%;
+}
+footer > #star65
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 91%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star66
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 90%;
+}
+footer > #star67
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 90%;
+    background-color: rgb(206, 255, 210);
+}
+footer > #star68
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 91%;
+    background-color: rgb(194, 255, 255);
+}
+footer > #star69
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 92%;
+}
+footer > #star70
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 93%;
+    background-color: rgb(255, 199, 252);
+}
+
+footer > #star71
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 1%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star72
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 2%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star73
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 2.5%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star74
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 3%;
+}
+footer > #star75
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 4%;
+}
+footer > #star76
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 5%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star77
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 6%;
+}
+footer > #star78
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 7%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star79
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 8%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star80
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 9%;
+}
+footer > #star81
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 10%;
+}
+footer > #star82
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 11%;
+}
+footer > #star83
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 12%;
+}
+footer > #star84
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 13%;
+}
+footer > #star85
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 14%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star86
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 15%;
+}
+footer > #star87
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 16%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star88
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 17%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star89
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 19%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star90
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 20%;
+}
+footer > #star91
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 21%;
+    
+}
+footer > #star92
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 22%;
+}
+footer > #star93
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 22.5%;
+}
+footer > #star94
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 23%;
+}
+footer > #star95
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 24%;
+}
+footer > #star96
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 25%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star97
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 26%;
+}
+footer > #star98
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 27%;
+}
+footer > #star99
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 30%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star100
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 31%;
+}
+footer > #star101
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 32%;
+}
+footer > #star102
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 33%;
+}
+footer > #star103
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 34%;
+}
+footer > #star104
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 35%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star105
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 36%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star106
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 37%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star107
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 38%;
+}
+footer > #star108
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 39%;
+}
+footer > #star109
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 40%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star110
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 41%;
+}
+footer > #star111
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 42%;
+}
+footer > #star112
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 43%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star113
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 44%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star114
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 46%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star115
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 48%;
+}
+footer > #star116
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 50%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star117
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 51%;
+}
+footer > #star118
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 52%;
+}
+footer > #star119
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 53%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star120
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 54%;
+}
+footer > #star121
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 55%;
+    
+}
+footer > #star122
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 56%;
+}
+footer > #star123
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 57%;
+}
+footer > #star124
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 58%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star125
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 59%;
+}
+footer > #star126
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 61%;
+}
+footer > #star127
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 62%;
+}
+footer > #star128
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 63%;
+}
+footer > #star129
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 64%;
+}
+footer > #star130
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 65%;
+    background-color: rgb(255, 238, 144);
+}
+footer > #star131
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 66%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star132
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 67%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star133
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 69%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star134
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 70%;
+}
+footer > #star135
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 71%;
+    background-color: rgb(195, 255, 198);
+}
+footer > #star136
+{
+    width: 6px;
+    height: 6px;
+    top: -22px;
+    left: 72%;
+}
+footer > #star137
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 73%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star138
+{
+    width: 10px;
+    height: 10px;
+    top: -62px;
+    left: 74%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star139
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 76%;
+}
+footer > #star140
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 77%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star141
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 79%;
+}
+footer > #star142
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 80%;
+    
+}
+footer > #star143
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 81%;
+}
+footer > #star144
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 82%;
+}
+footer > #star145
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 84%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star146
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 85%;
+}
+footer > #star147
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 86%;
+}
+footer > #star148
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 87%;
+}
+footer > #star149
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 88%;
+}
+footer > #star150
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 87%;
+}
+footer > #star151
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 88%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star152
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 89%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star153
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 90%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star154
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 25%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star155
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 94%;
+}
+footer > #star156
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 21%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star157
+{
+    width: 6px;
+    height: 6px;
+    top: -22px;
+    left: 89.5%;
+}
+footer > #star158
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 89%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star159
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 90%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star160
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 91%;
+}
+footer > #star161
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 92%;
+}
+footer > #star162
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 92%;
+    
+}
+footer > #star163
+{
+    width: 2px;
+    height: 2px;
+    top: -47px;
+    left: 93%;
+}
+footer > #star164
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 7%;
+}
+footer > #star165
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 10%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star166
+{
+    width: 9px;
+    height: 9px;
+    top: -97px;
+    left: 12%;
+}
+footer > #star167
+{
+    width: 3px;
+    height: 3px;
+    top: -12px;
+    left: 95%;
+}
+footer > #star168
+{
+    width: 7px;
+    height: 7px;
+    top: -101px;
+    left: 15%;
+}
+footer > #star169
+{
+    width: 5px;
+    height: 5px;
+    top: -85px;
+    left: 17%;
+}
+footer > #star170
+{
+    width: 3px;
+    height: 3px;
+    top: -68px;
+    left: 18%;
+}
+footer > #star171
+{
+    width: 6px;
+    height: 6px;
+    top: -42px;
+    left: 96%;
+    background-color: rgb(208, 179, 255);
+}
+
+
+footer
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+    height: auto;
+    box-shadow: rgb(0, 0, 87) 0px -100px 100px;
+    padding-top: 10px;
+    padding-bottom: 110px;
+}
+
+footer > h1
+{
+    font-size: 200%;
+    color: white;
+}
+
+footer > a 
+{
+    z-index: 3;
+    padding-right: 10%;
+    padding: 25px;
+}
+}
+
+{
+
+}
+
+@media only screen and (min-width: 1200px)
+{
+/* Grid Layouts */
+#outer-grid 
+{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    overflow-wrap: break-word;
+}
+
+/*#inner-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+#inner-grid > div 
+{
+    background: lightgreen;
+    padding: 8px;
+}*/
+header
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+nav
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#content
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+}
+footer
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+
+html
+{
+    font-family: 'Sung';
+    overflow-x: hidden;
+}
+body
+{
+    /*background-color: rgb(0, 23, 126);*/
+    background: linear-gradient(to right, rgb(0, 15, 83), rgb(0, 78, 102),rgb(0, 15, 83));
+    font-family: 'Sung';
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 1.6%;
+    background: #00137e; 
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 16px rgb(0, 0, 0); 
+    border-radius: 30px;
+    background: #012f74; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(2, 0, 119); 
+    border-radius: 30px;
+    border: white solid 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0026ff; 
+  }
+  
+/*header
+{
+    height: 400px;
+    width: 2000px;
+}*/
+
+/* HUGE NAVIGATION AREA */
+nav
+{
+    display: block;
+    position: relative;
+    max-width: 1710px;
+    height: 500px;
+    background-color: rgb(3, 0, 44);
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 5;
+    box-shadow: rgb(0, 0, 0) 0px 15px 50px;
+}
+
+
+
+#expandNav
+{
+    position: relative;
+    /*top: 150px;*/
+    align-self: center;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 1s;
+    border-radius: 50%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    
+    
+}
+
+#expandNav:hover
+{
+    width: 500px;
+    height: 500px;
+    /*top: 50px;*/
+    transition: 1s;
+}
+
+.center
+{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div#cluster
+{
+    position: relative;
+    background-color: rgba(0, 103, 163, 0.247);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+
+    z-index: 5;
+}
+
+#expandNav:hover > div#cluster
+{
+    background-color: rgba(255, 255, 255, 0.466);
+    height: 150px;
+    width: 150px;
+}
+
+/* Home button */
+#expandNav > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 2px;
+    width: 5px;
+    border-radius: 5%;
+    transition: 1s;
+    z-index: 4;
+    
+
+}
+
+
+#expandNav > p
+{
+    position: absolute;
+    font-size: 50px;
+    z-index: 100;
+    transition: 2s;
+    color: white;
+}
+
+#expandNav:hover > p
+{
+    position: absolute;
+    font-size: 1px;
+    filter: opacity(0);
+    z-index: 1;
+    transition: 1s;
+    color: white;
+}
+
+#expandNav:hover > div#cluster > a > div#home
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 22px;
+    width: 55px;
+    border-radius: 5%;
+    transition: 0.5s;
+    z-index: 4;
+
+
+}
+
+#expandNav:hover > div#cluster > a > div#home:hover
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 28px;
+    width: 80px;
+    
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 4;
+    box-shadow: white 0px 0px 10px;
+
+}
+
+#expandNav > div#cluster > a > div#home > p
+{
+    filter: opacity(0%);
+    position: relative;
+    text-align: center;
+    font-size: 1%;
+    transition: 1s;
+}
+
+#expandNav:hover > div#cluster > a > div#home > p
+{
+    filter: opacity(100%);
+    transition: 1.25s;
+    font-size: 150%;
+    color: white;
+}
+
+/* */
+
+#expandNav > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+    
+
+}
+
+#expandNav > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#five 
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+#expandNav > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 3;
+}
+
+
+#expandNav > div#cluster > a > div#one > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#two > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#three > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#four > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#five > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+#expandNav > div#cluster > a > div#six > p
+{
+    transition: 1s;
+    z-index: 3;
+    filter: opacity(0%);
+    padding: 2px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+
+
+#expandNav:hover > div#cluster > a > div#one
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, -125px);
+}
+
+#expandNav:hover > div#cluster > a > div#two
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(75px, -25px);
+}
+
+#expandNav:hover > div#cluster > a > div#three
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(25px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#four
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, 75px);
+}
+
+#expandNav:hover > div#cluster > a > div#five
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-225px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > a > div#six
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 1s;
+    transform: translate(-175px, -125px);
+}
+
+
+#expandNav:hover > div#cluster > a > div#one > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#two > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#three > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color:rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#four > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#five > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+#expandNav:hover > div#cluster > a > div#six > p
+{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: 1.25s;
+    filter: opacity(100%);
+    color: rgb(255, 255, 255);
+    font-size: 175%;
+}
+
+
+#expandNav > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+#expandNav > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 2;
+}
+
+
+#expandNav:hover > div#cluster > div#core1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, -50px);
+
+}
+
+#expandNav:hover > div#cluster > div#core2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(0px, -25px);
+}
+
+#expandNav:hover > div#cluster > div#core3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-12.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, 0px);
+}
+
+#expandNav:hover > div#cluster > div#core5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-50px, -25px);
+
+}
+
+#expandNav:hover > div#cluster > div#core6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    transform: translate(-37.5px, -50px);
+
+}
+
+#expandNav > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-12deg);
+}
+
+#expandNav > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+
+#expandNav > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(-60deg);
+}
+
+#expandNav > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(12deg);
+}
+
+#expandNav > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 1px;
+    width: 1px;
+    transition: 1s;
+    transform: rotateZ(60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch1
+{
+    position: absolute;
+    background-color: rgb(27, 0, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-12.5px, -75px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch2
+{
+    position: absolute;
+    background-color: rgb(22, 22, 0);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(25px, -15px) rotateZ(-12deg);
+}
+
+#expandNav:hover > div#cluster > div#branch3
+{
+    position: absolute;
+    background-color: rgb(0, 29, 2);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-10px, 50px) rotateZ(60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch4
+{
+    position: absolute;
+    background-color: rgb(0, 23, 39);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-90px, 50px) rotateZ(-60deg);
+}
+
+#expandNav:hover > div#cluster > div#branch5
+{
+    position: absolute;
+    background-color: rgb(5, 0, 46);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: translate(-125px, -15px) rotateZ(12deg);
+
+}
+
+#expandNav:hover > div#cluster > div#branch6
+{
+    position: absolute;
+    background-color: rgb(25, 0, 27);
+    height: 20px;
+    width: 100px;
+    transition: 1s;
+    transform: rotateZ(60deg) translate(-100px, 37.5px);
+}
+
+#expandNav:hover > div#cluster > a > div#one:hover
+{
+    position: absolute;
+    background-color: rgb(136, 0, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover
+{
+    position: absolute;
+    background-color: rgb(136, 136, 0);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(90px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover
+{
+    position: absolute;
+    background-color: rgb(0, 136, 9);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(35px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover
+{
+    position: absolute;
+    background-color: rgb(0, 79, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, 80px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover
+{
+    position: absolute;
+    background-color: rgb(16, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-240px, -30px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover
+{
+    position: absolute;
+    background-color: rgb(127, 0, 136);
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    transition: 0.33s;
+    transform: translate(-185px, -130px) scale(1.25);
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 0px 50px;
+}
+
+
+#expandNav:hover > div#cluster > a > div#one:hover > p
+{
+    color: rgb(255, 255, 255);
+    
+}
+
+#expandNav:hover > div#cluster > a > div#two:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#three:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#four:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#five:hover > p
+{
+    color: rgb(255, 255, 255);
+}
+
+#expandNav:hover > div#cluster > a > div#six:hover > p
+{
+    color: rgb(255, 255, 255); 
+
+}
+
+/* Header */
+header 
+{
+    background-color: rgba(0, 0, 0, 0.192);
+    height: 500px;
+    width: 100%;
+    position: relative;
+    box-shadow: black 0px 2px 15px;
+    max-width: 1710px;
+    margin: auto;
+}
+
+h1
+{
+    display: block;
+    position: relative;
+    color: white;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 50px;
+    padding-left: 10px;
+    z-index: 5;
+    text-indent: 10px;
+    text-shadow: black 0px 5px 5px;
+}
+div#cloud1
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(123, 116, 255);
+    z-index: 3;
+    left: -25px;
+    top: -75px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud2
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(73, 64, 255);
+    z-index: 3;
+    left: -250px;
+    top: 75px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud3
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(75, 65, 255);
+    z-index: 3;
+    left: 200px;
+    top: 0px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud4
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 150px;
+    top: 125px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud5
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 225px;
+    top: -325px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud6
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(69, 59, 255);
+    z-index: 3;
+    left: 450px;
+    top: 300px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud7
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 325px;
+    top: 400px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud8
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(133, 126, 255);
+    z-index: 3;
+    left: 195px;
+    top: 450px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud9
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(135, 129, 255);
+    z-index: 3;
+    left: 350px;
+    top: 250px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud10
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 175px;
+    top: 325px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud11
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(93, 85, 255);
+    z-index: 3;
+    left: 625px;
+    top: 300px;
+    box-shadow: black 0px 5px 30px;
+}
+
+div#cloud12
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    background-color: rgb(59, 49, 255);
+    z-index: 3;
+    left: 600px;
+    top: 150px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud13
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(121, 113, 255);
+    z-index: 3;
+    left: 475px;
+    top: 125px;
+    box-shadow: black 0px 5px 30px;
+}
+div#cloud14
+{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 62.5px;
+    height: 62.5px;
+    background-color: rgb(51, 41, 255);
+    z-index: 3;
+    left: 775px;
+    top: 75px;
+    box-shadow: black 0px 5px 30px;
+}
+
+
+article.introContent
+{
+    position: relative;
+    margin-bottom: 50px;
+    margin: auto;
+    max-width: 1710px;
+    box-shadow: black 0px 0px 15px;
+    background: linear-gradient(to right, rgb(0, 23, 126), rgb(0, 97, 126),rgb(0, 23, 126));
+}
+
+h2
+{
+    display: block;
+    position: relative;
+    color: rgb(195, 251, 255);
+    left: 10%;
+    width: 100%;
+    font-size: 4em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    text-shadow: black 0px 5px 5px;
+}
+
+article.introContent > h2
+{
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px;
+    padding-top: 20px;
+    width: 1px;
+}
+
+article.introContent > p
+{
+    position: absolute;
+    font-size: 2.5em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    margin: 50px 50px 25px 50px;
+    border-radius: 25px;
+    padding: 30px;
+    z-index: 2;
+    text-shadow: black 1px 2px 1px;
+}
+
+article.introContent > p:nth-of-type(2)
+{
+    position: relative;
+    font-size: 2.5em;
+    color: rgb(123, 235, 255);
+    background-color:rgb(51, 71, 255);
+    top: -150px;
+    border-radius: 25px;
+    padding: 30px;
+    z-index: 2;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+article.introContent > div#pill1
+{
+    position: relative;
+    display: block;
+    left: 50px;
+    top: 0px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill2
+{
+    position: relative;
+    display: block;
+    left: 100px;
+    top: -60px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill3
+{
+    position: relative;
+    display: block;
+    left: 150px;
+    top: -120px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+article.introContent > div#pill4
+{
+    position: relative;
+    display: block;
+    left: 200px;
+    top: -190px;
+    width: 25px;
+    height: 75px;
+    border-radius: 1000px;
+    background-color:rgb(51, 71, 255);
+    z-index: 1;
+    box-shadow: rgb(156, 255, 255) 0px -5px 5px;
+}
+
+footer > #blackHole1
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    left: -50px;
+}
+footer > #blackHole2
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: 75px;
+}
+footer > #blackHole3
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -67.5px;
+    left: 230px;
+}
+footer > #blackHole4
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    top: -33px;
+    left: 300px;
+}
+footer > #blackHole5
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: 300px;
+}
+footer > #blackHole6
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -25px;
+    left: 190px;
+}
+footer > #blackHole7
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    top: -25px;
+    left: 460px;
+
+}
+footer > #blackHole8
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -70px;
+    left: 600px;
+
+}
+footer > #blackHole9
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: -75px;
+    left: 700px;
+
+}
+
+footer > #blackHole10
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -25px;
+    left: 190px;
+}
+footer > #blackHole11
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    top: -75px;
+    left: 460px;
+
+}
+footer > #blackHole12
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -100px;
+    left: 600px;
+
+}
+footer > #blackHole13
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    top: -120px;
+    left: 860px;
+
+}
+footer > #blackHole14
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    top: -75px;
+    left: 1100px;
+
+}
+footer > #blackHole15
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: 1310px;
+
+}
+footer > #blackHole16
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    top: -85px;
+    left: 1410px;
+
+}
+footer > #blackCover1
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    width: 300px;
+    height: 405px;
+    top: -125px;
+    left: 1710px;
+    z-index: 10;
+
+}
+footer > #blackCover2
+{
+    background-color: black;
+    box-shadow: black 0px -50px 50px;
+    position: absolute;
+    width: 300px;
+    height: 405px;
+    top: -125px;
+    left: -300px;
+    z-index: 10;
+
+}
+
+footer > #nebula1
+{
+    background-color: rgba(37, 0, 0, 0.5);
+    box-shadow: rgba(53, 0, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+    z-index: 2;
+    -webkit-animation-name: nebula1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula1;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+
+@-webkit-keyframes nebula1
+{
+    0%      {margin-left: -250px; margin-top: -100px; transition-timing-function: linear; filter: opacity(0);}
+    6.67%   {margin-left: -110px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 30px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 170px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 310px;  margin-top: -110px;transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 590px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1010px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1150px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1290px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1430px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1570px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1710px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    100%    {margin-left: -250px; margin-top: -100px; filter: opacity(0);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula1
+{
+    0%      {margin-left: -250px; margin-top: -100px; transition-timing-function: linear; filter: opacity(0);}
+    6.67%   {margin-left: -110px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 30px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 170px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 310px;  margin-top: -110px;transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 590px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1010px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1150px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1290px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1430px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1570px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1710px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    100%    {margin-left: -250px; margin-top: -100px; filter: opacity(0);}
+}
+
+footer > #nebula2
+{
+    background-color: rgba(2, 0, 37, 0.5);
+    box-shadow: rgba(5, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: -110px;
+    z-index: 2;
+    -webkit-animation-name: nebula2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula2;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula2
+{
+          
+    0%      {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 30px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 310px;  margin-top: -95px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 590px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 730px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1010px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1150px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1290px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1430px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: -250px; margin-top: -100px; filter: opacity(0);}
+    100%    {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula2
+{
+    0%      {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 30px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 310px;  margin-top: -95px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 590px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 730px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1010px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1150px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1290px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1430px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: -250px; margin-top: -100px; filter: opacity(0);}
+    100%    {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+        
+}
+footer > #nebula3
+{
+    background-color: rgba(0, 37, 0, 0.5);
+    box-shadow: rgba(4, 53, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+    z-index: 2;
+    -webkit-animation-name: nebula3; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula3;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+
+@-webkit-keyframes nebula3
+{
+          
+    0%      {margin-left: 30px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 170px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 450px;  margin-top: -80px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 730px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 870px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1150px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1290px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1570px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: -250px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: -110px; margin-top: -85px; filter: opacity(0);}
+    100%    {margin-left: 30px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula3
+{
+    0%      {margin-left: 30px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 170px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 450px;  margin-top: -80px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 730px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 870px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1150px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1290px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1570px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: -250px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: -110px; margin-top: -85px; filter: opacity(0);}
+    100%    {margin-left: 30px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula4
+{
+    background-color: rgba(37, 22, 0, 0.5);
+    box-shadow: rgba(53, 30, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 170px;
+    z-index: 2;
+    -webkit-animation-name: nebula4; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula4;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula4
+{
+          
+    0%      {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 310px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 450px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 590px;  margin-top: -80px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 730px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1150px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1290px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1710px; margin-top: -120px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: -250px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: -110px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: 30px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula4
+{
+    0%      {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 310px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 450px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 590px;  margin-top: -80px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 730px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1150px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1290px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1710px; margin-top: -120px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: -250px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: -110px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    93.38%  {margin-left: 30px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula5
+{
+    background-color: rgba(0, 33, 37, 0.5);
+    box-shadow: rgba(0, 50, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 310px;
+    z-index: 2;
+    -webkit-animation-name: nebula5; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula5;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula5
+{
+          
+    0%      {margin-left: 310px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 450px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 730px;  margin-top: -70px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 870px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1010px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1150px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1290px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1430px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1570px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1710px; margin-top: -115px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: -250px; margin-top: -100px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: -110px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: 30px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 310px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula5
+{
+    0%      {margin-left: 310px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 450px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 730px;  margin-top: -70px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 870px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1010px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1150px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1290px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1430px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1570px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1710px; margin-top: -115px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: -250px; margin-top: -100px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: -110px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    86.71%  {margin-left: 30px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 310px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula6
+{
+    background-color: rgba(20, 0, 37, 0.5);
+    box-shadow: rgba(23, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 450px;
+    z-index: 2;
+    -webkit-animation-name: nebula6; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula6;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula6
+{
+          
+    0%      {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 590px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 870px;  margin-top: -125px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1010px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1290px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1430px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1570px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    66.70%  {margin-left: -250px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: 30px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula6
+{
+    0%      {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 590px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 870px;  margin-top: -125px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1010px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1290px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1430px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1570px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    66.70%  {margin-left: -250px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    80.04%  {margin-left: 30px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula7
+{
+    background-color: rgba(37, 0, 35, 0.5);
+    box-shadow: rgba(53, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 590px;
+    z-index: 2;
+    -webkit-animation-name: nebula7; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula7;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula7
+{
+          
+    0%      {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 730px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 870px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1010px;  margin-top: -105px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1290px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1710px; margin-top: -115px; transition-timing-function: linear;filter: opacity(0);}
+    60.03%  {margin-left: -250px; margin-top: -100px; transition-timing-function: linear;filter: opacity(0);}
+    66.70%  {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: 30px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 170px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 450px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula7
+{
+    0%      {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 730px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 870px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1010px;  margin-top: -105px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1290px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 1710px; margin-top: -115px; transition-timing-function: linear;filter: opacity(0);}
+    60.03%  {margin-left: -250px; margin-top: -100px; transition-timing-function: linear;filter: opacity(0);}
+    66.70%  {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    73.37%  {margin-left: 30px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 170px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 450px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula8
+{
+    background-color: rgba(37, 36, 0, 0.5);
+    box-shadow: rgba(52, 53, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 730px;
+    z-index: 2;
+    -webkit-animation-name: nebula8; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula8;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula8
+{
+          
+    0%      {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 870px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1150px;  margin-top: -130px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1290px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1710px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: -250px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    60.03%  {margin-left: -110px; margin-top: -75px; transition-timing-function: linear; filter: opacity(0);}
+    66.70%  {margin-left: 30px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 170px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 450px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 590px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula8
+{
+    0%      {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 870px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1010px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1150px;  margin-top: -130px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1290px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 1710px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: -250px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    60.03%  {margin-left: -110px; margin-top: -75px; transition-timing-function: linear; filter: opacity(0);}
+    66.70%  {margin-left: 30px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 170px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 450px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 590px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 730px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula9
+{
+    background-color: rgba(37, 0, 0, 0.5);
+    box-shadow: rgba(53, 0, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 870px;
+    z-index: 2;
+    -webkit-animation-name: nebula9; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula9;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula9
+{
+          
+    0%      {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1010px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1150px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1290px;  margin-top: -105px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1430px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1570px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1710px; margin-top: -80px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: -250px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    60.03%  {margin-left: 30px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 310px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 590px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula9
+{
+    0%      {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1010px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1150px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1290px;  margin-top: -105px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1430px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1570px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 1710px; margin-top: -80px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: -250px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    60.03%  {margin-left: 30px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 310px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 450px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 590px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula10
+{
+    background-color: rgba(2, 0, 37, 0.5);
+    box-shadow: rgba(5, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 1010px;
+    z-index: 2;
+    -webkit-animation-name: nebula10; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula10;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula10
+{
+          
+    0%      {margin-left: 1010px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1150px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1290px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1430px;  margin-top: -70px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1570px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: -250px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 310px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 450px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 590px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 730px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 870px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1010px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula10
+{
+    0%      {margin-left: 1010px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1150px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1290px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1430px;  margin-top: -70px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1570px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: -250px; margin-top: -90px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: -110px; margin-top: -105px; transition-timing-function: linear; filter: opacity(0);}
+    53.36%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 170px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 310px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 450px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 590px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 730px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 870px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1010px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula11
+{
+    background-color: rgba(0, 37, 0, 0.5);
+    box-shadow: rgba(4, 53, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 1150px;
+    z-index: 2;
+    -webkit-animation-name: nebula11; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula11;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula11
+{
+          
+    0%      {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1290px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1570px;  margin-top: -115px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1710px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: -250px; margin-top: -135px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: -110px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 590px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 730px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 870px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1010px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula11
+{
+    0%      {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1290px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1430px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1570px;  margin-top: -115px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 1710px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: -250px; margin-top: -135px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: -110px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    46.69%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 310px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 590px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 730px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 870px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1010px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula12
+{
+    background-color: rgba(37, 22, 0, 0.5);
+    box-shadow: rgba(53, 30, 0, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 1290px;
+    z-index: 2;
+    -webkit-animation-name: nebula12; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula12;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula12
+{
+          
+    0%      {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1430px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1570px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1710px;  margin-top: -130px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: -250px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 170px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 450px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 590px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 870px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1010px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1150px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula12
+{
+    0%      {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1430px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1570px; margin-top: -120px; transition-timing-function: linear; filter: opacity(1);}
+    20.01%  {margin-left: 1710px;  margin-top: -130px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: -250px; margin-top: -125px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: -110px; margin-top: -110px; transition-timing-function: linear; filter: opacity(0);}
+    40.02%  {margin-left: 30px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 170px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 310px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 450px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 590px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 730px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 870px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1010px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1150px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula13
+{
+    background-color: rgba(0, 33, 37, 0.5);
+    box-shadow: rgba(0, 50, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 1430px;
+    z-index: 2;
+    -webkit-animation-name: nebula13; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula13;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula13
+{
+          
+    0%      {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1570px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: -250px;  margin-top: -85px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: -110px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: 30px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 310px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 450px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 730px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1010px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1150px; margin-top: -135px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula13
+{
+    0%      {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1570px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    13.34%  {margin-left: 1710px; margin-top: -95px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: -250px;  margin-top: -85px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: -110px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    33.35%  {margin-left: 30px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 170px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 310px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 450px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 730px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1010px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1150px; margin-top: -135px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1430px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula14
+{
+    background-color: rgba(20, 0, 37, 0.5);
+    box-shadow: rgba(23, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 1570px;
+    z-index: 2;
+    -webkit-animation-name: nebula14; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula14;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula14
+{
+          
+    0%      {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    13.34%  {margin-left: -250px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: -110px;  margin-top: -65px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: 30px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 170px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 310px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 730px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1010px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1150px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1290px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1430px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula14
+{
+    0%      {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    6.67%   {margin-left: 1710px; margin-top: -85px; transition-timing-function: linear; filter: opacity(0);}
+    13.34%  {margin-left: -250px; margin-top: -70px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: -110px;  margin-top: -65px;transition-timing-function: linear; filter: opacity(0);}
+    26.68%  {margin-left: 30px; margin-top: -80px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 170px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 310px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 590px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 730px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 870px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1010px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1150px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1290px; margin-top: -110px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1430px; margin-top: -100px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1570px; margin-top: -95px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+footer > #nebula15
+{
+    background-color: rgba(37, 0, 35, 0.5);
+    box-shadow: rgba(53, 0, 53, 0.438) 0px -50px 25px;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    margin-left: 1710px;
+    z-index: 2;
+    -webkit-animation-name: nebula15; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: nebula15;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    -webkit-animation-timing-function: linear;
+    filter: opacity(1);
+}
+@-webkit-keyframes nebula15
+{
+          
+    0%      {margin-left: 1710px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    6.67%   {margin-left: -250px; margin-top: -135px; transition-timing-function: linear; filter: opacity(0);}
+    13.34%  {margin-left: -110px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: 30px;  margin-top: -120px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 310px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 730px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1010px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1430px; margin-top: -135px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1710px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+}
+  
+  /* Standard syntax */
+@keyframes nebula15
+{
+    0%      {margin-left: 1710px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    6.67%   {margin-left: -250px; margin-top: -135px; transition-timing-function: linear; filter: opacity(0);}
+    13.34%  {margin-left: -110px; margin-top: -130px; transition-timing-function: linear; filter: opacity(0);}
+    20.01%  {margin-left: 30px;  margin-top: -120px;transition-timing-function: linear; filter: opacity(1);}
+    26.68%  {margin-left: 170px; margin-top: -90px; transition-timing-function: linear; filter: opacity(1);}
+    33.35%  {margin-left: 310px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    40.02%  {margin-left: 450px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    46.69%  {margin-left: 590px; margin-top: -75px; transition-timing-function: linear; filter: opacity(1);}
+    53.36%  {margin-left: 730px; margin-top: -65px; transition-timing-function: linear; filter: opacity(1);}
+    60.03%  {margin-left: 870px; margin-top: -70px; transition-timing-function: linear; filter: opacity(1);}
+    66.70%  {margin-left: 1010px; margin-top: -105px; transition-timing-function: linear; filter: opacity(1);}
+    73.37%  {margin-left: 1150px; margin-top: -85px; transition-timing-function: linear; filter: opacity(1);}
+    80.04%  {margin-left: 1290px; margin-top: -115px; transition-timing-function: linear; filter: opacity(1);}
+    86.71%  {margin-left: 1430px; margin-top: -135px; transition-timing-function: linear; filter: opacity(1);}
+    93.38%  {margin-left: 1570px; margin-top: -125px; transition-timing-function: linear; filter: opacity(1);}
+    100%    {margin-left: 1710px; margin-top: -130px; transition-timing-function: linear; filter: opacity(1);}
+        
+}
+
+
+footer > .stars
+{
+    border-radius: 50%;
+    background-color: white;
+    
+    position: absolute;
+    z-index: 3;
+
+    
+}
+footer > #star1
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 1%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star2
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 2%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star3
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 3%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star4
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 3%;
+}
+footer > #star5
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 4%;
+}
+footer > #star6
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 5%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star7
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 9%;
+}
+footer > #star8
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 11%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star9
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 12%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star10
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 15%;
+}
+footer > #star11
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 17%;
+}
+footer > #star12
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 19%;
+}
+footer > #star13
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 21%;
+}
+footer > #star14
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 22%;
+}
+footer > #star15
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 25%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star16
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 27%;
+}
+footer > #star17
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 28%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star18
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 29%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star19
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 32%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star20
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 35%;
+}
+footer > #star21
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 35%;
+    
+}
+footer > #star22
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 36%;
+}
+footer > #star23
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 37%;
+}
+footer > #star24
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 39%;
+}
+footer > #star25
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 41%;
+}
+footer > #star26
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 43%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star27
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 45%;
+}
+footer > #star28
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 46%;
+}
+footer > #star29
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 47%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star30
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 48%;
+}
+footer > #star31
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 50%;
+}
+footer > #star32
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 52%;
+}
+footer > #star33
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 53%;
+}
+footer > #star34
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 54%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star35
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 55%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star36
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 56%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star37
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 58%;
+}
+footer > #star38
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 59%;
+}
+footer > #star39
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 60%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star40
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 60%;
+}
+footer > #star41
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 61%;
+}
+footer > #star42
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 63%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star43
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 64%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star44
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 65%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star45
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 66%;
+}
+footer > #star46
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 67%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star47
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 68%;
+}
+footer > #star48
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 70%;
+}
+footer > #star49
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 71%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star50
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 72%;
+}
+footer > #star51
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 73%;
+    
+}
+footer > #star52
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 75%;
+}
+footer > #star53
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 76%;
+}
+footer > #star54
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 77%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star55
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 79%;
+}
+footer > #star56
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 80%;
+}
+footer > #star57
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 81%;
+}
+footer > #star58
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 82%;
+}
+footer > #star59
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 83%;
+}
+footer > #star60
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 85%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star61
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 86%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star62
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 87%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star63
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 89%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star64
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 90%;
+}
+footer > #star65
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 91%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star66
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 90%;
+}
+footer > #star67
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 90%;
+    background-color: rgb(206, 255, 210);
+}
+footer > #star68
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 91%;
+    background-color: rgb(194, 255, 255);
+}
+footer > #star69
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 92%;
+}
+footer > #star70
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 93%;
+    background-color: rgb(255, 199, 252);
+}
+
+footer > #star71
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 1%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star72
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 2%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star73
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 2.5%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star74
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 3%;
+}
+footer > #star75
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 4%;
+}
+footer > #star76
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 5%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star77
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 6%;
+}
+footer > #star78
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 7%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star79
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 8%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star80
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 9%;
+}
+footer > #star81
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 10%;
+}
+footer > #star82
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 11%;
+}
+footer > #star83
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 12%;
+}
+footer > #star84
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 13%;
+}
+footer > #star85
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 14%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star86
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 15%;
+}
+footer > #star87
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 16%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star88
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 17%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star89
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 19%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star90
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 20%;
+}
+footer > #star91
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 21%;
+    
+}
+footer > #star92
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 22%;
+}
+footer > #star93
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 22.5%;
+}
+footer > #star94
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 23%;
+}
+footer > #star95
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 24%;
+}
+footer > #star96
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 25%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star97
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 26%;
+}
+footer > #star98
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 27%;
+}
+footer > #star99
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 30%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star100
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 31%;
+}
+footer > #star101
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 32%;
+}
+footer > #star102
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 33%;
+}
+footer > #star103
+{
+    width: 5px;
+    height: 5px;
+    top: -10px;
+    left: 34%;
+}
+footer > #star104
+{
+    width: 7px;
+    height: 7px;
+    top: -50px;
+    left: 35%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star105
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 36%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star106
+{
+    width: 5px;
+    height: 5px;
+    top: -75px;
+    left: 37%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star107
+{
+    width: 6px;
+    height: 6px;
+    top: -30px;
+    left: 38%;
+}
+footer > #star108
+{
+    width: 3px;
+    height: 3px;
+    top: -40px;
+    left: 39%;
+}
+footer > #star109
+{
+    width: 2px;
+    height: 2px;
+    top: -10px;
+    left: 40%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star110
+{
+    width: 3px;
+    height: 3px;
+    top: -17px;
+    left: 41%;
+}
+footer > #star111
+{
+    width: 3px;
+    height: 3px;
+    top: -19px;
+    left: 42%;
+}
+footer > #star112
+{
+    width: 3px;
+    height: 3px;
+    top: -23px;
+    left: 43%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star113
+{
+    width: 4px;
+    height: 4px;
+    top: -42px;
+    left: 44%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star114
+{
+    width: 3px;
+    height: 3px;
+    top: -35px;
+    left: 46%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star115
+{
+    width: 5px;
+    height: 5px;
+    top: -56px;
+    left: 48%;
+}
+footer > #star116
+{
+    width: 3px;
+    height: 3px;
+    top: -63px;
+    left: 50%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star117
+{
+    width: 3px;
+    height: 3px;
+    top: -58px;
+    left: 51%;
+}
+footer > #star118
+{
+    width: 4px;
+    height: 4px;
+    top: -20px;
+    left: 52%;
+}
+footer > #star119
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 53%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star120
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 54%;
+}
+footer > #star121
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 55%;
+    
+}
+footer > #star122
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 56%;
+}
+footer > #star123
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 57%;
+}
+footer > #star124
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 58%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star125
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 59%;
+}
+footer > #star126
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 61%;
+}
+footer > #star127
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 62%;
+}
+footer > #star128
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 63%;
+}
+footer > #star129
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 64%;
+}
+footer > #star130
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 65%;
+    background-color: rgb(255, 238, 144);
+}
+footer > #star131
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 66%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star132
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 67%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star133
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 69%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star134
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 70%;
+}
+footer > #star135
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 71%;
+    background-color: rgb(195, 255, 198);
+}
+footer > #star136
+{
+    width: 6px;
+    height: 6px;
+    top: -22px;
+    left: 72%;
+}
+footer > #star137
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 73%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star138
+{
+    width: 10px;
+    height: 10px;
+    top: -62px;
+    left: 74%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star139
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 76%;
+}
+footer > #star140
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 77%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star141
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 79%;
+}
+footer > #star142
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 80%;
+    
+}
+footer > #star143
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 81%;
+}
+footer > #star144
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 82%;
+}
+footer > #star145
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 84%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star146
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 85%;
+}
+footer > #star147
+{
+    width: 6px;
+    height: 6px;
+    top: -82px;
+    left: 86%;
+}
+footer > #star148
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 87%;
+}
+footer > #star149
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 88%;
+}
+footer > #star150
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 87%;
+}
+footer > #star151
+{
+    width: 9px;
+    height: 9px;
+    top: -55px;
+    left: 88%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star152
+{
+    width: 8px;
+    height: 8px;
+    top: -31px;
+    left: 89%;
+    background-color: rgb(168, 255, 255);
+    
+}
+footer > #star153
+{
+    width: 7px;
+    height: 7px;
+    top: -47px;
+    left: 90%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star154
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 25%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star155
+{
+    width: 4px;
+    height: 4px;
+    top: -18px;
+    left: 94%;
+}
+footer > #star156
+{
+    width: 5px;
+    height: 5px;
+    top: -97px;
+    left: 21%;
+    background-color: rgb(255, 254, 195);
+}
+footer > #star157
+{
+    width: 6px;
+    height: 6px;
+    top: -22px;
+    left: 89.5%;
+}
+footer > #star158
+{
+    width: 4px;
+    height: 4px;
+    top: -67px;
+    left: 89%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star159
+{
+    width: 5px;
+    height: 5px;
+    top: -62px;
+    left: 90%;
+    background-color: rgb(168, 255, 255);
+}
+footer > #star160
+{
+    width: 3px;
+    height: 3px;
+    top: -57px;
+    left: 91%;
+}
+footer > #star161
+{
+    width: 3px;
+    height: 3px;
+    top: -25px;
+    left: 92%;
+}
+footer > #star162
+{
+    width: 10px;
+    height: 10px;
+    top: -59px;
+    left: 92%;
+    
+}
+footer > #star163
+{
+    width: 2px;
+    height: 2px;
+    top: -47px;
+    left: 93%;
+}
+footer > #star164
+{
+    width: 3px;
+    height: 3px;
+    top: -100px;
+    left: 7%;
+}
+footer > #star165
+{
+    width: 4px;
+    height: 4px;
+    top: -108px;
+    left: 10%;
+    background-color: rgb(255, 144, 144);
+}
+footer > #star166
+{
+    width: 9px;
+    height: 9px;
+    top: -97px;
+    left: 12%;
+}
+footer > #star167
+{
+    width: 3px;
+    height: 3px;
+    top: -12px;
+    left: 95%;
+}
+footer > #star168
+{
+    width: 7px;
+    height: 7px;
+    top: -101px;
+    left: 15%;
+}
+footer > #star169
+{
+    width: 5px;
+    height: 5px;
+    top: -85px;
+    left: 17%;
+}
+footer > #star170
+{
+    width: 3px;
+    height: 3px;
+    top: -68px;
+    left: 18%;
+}
+footer > #star171
+{
+    width: 6px;
+    height: 6px;
+    top: -42px;
+    left: 96%;
+    background-color: rgb(208, 179, 255);
+}
+
+
+footer
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+    height: auto;
+    box-shadow: rgb(0, 0, 87) 0px -100px 100px;
+    padding-top: 10px;
+    padding-bottom: 110px;
+    max-width: 1710px;
+    margin: auto;
+}
+
+footer > h1
+{
+    font-size: 200%;
+    color: white;
+}
+
+footer > a 
+{
+    z-index: 3;
+    padding-right: 10%;
+    padding: 25px;
+}
+}
+
+{
+
+}
+/* PRINTER LAYOUT */
+@media print 
+    {
+    
+    html
+    {
+        font-family: 'Sung';
+    }
+
+    nav
+    {
+        display: none;
+    }
+
+    h1
+    {
+        text-align: center;
+        font-size: 250%;
+    }
+    h2
+    {
+        text-align: center;
+        font-size: 200%;
+    }
+    h3
+    {
+        text-align: center;
+        font-size: 150%;
+    }
+    h4
+    {
+        text-align: center;
+        font-size: 125%;
+    }
+    h5
+    {
+        text-align: center;
+        font-size: 110%;
+    }
+
+    header > div
+    {
+        margin: auto;
+
+    }
+    header > div > img
+    {
+        position: relative;
+        width: 100px;
+        margin: auto;
+        left: 275px;
+        
+    }
+    header > div#contactIcon > div#contactIconInner > div#mailBox > div#mailLogo > img
+    {
+        width: 100px;
+        margin: auto;
+        position: relative;
+        left: 275px;
+    }
+    
+    table#webGallery > tbody > tr > td > a > img 
+    {
+        width: 200px;
+    }
+
+
+
+
+    header
+    {
+        margin: 30px;
+        position: relative;
+    }
+
+    article
+    {
+        position: relative;
+        margin: 10px;
+    }
+
+    article > h3
+    {
+        text-align: center;
+        word-spacing: 50%;
+    }
+
+    article.introContent > h3
+    {
+        text-align: center;
+        word-spacing: 50%;
+    }
+
+    p
+    {
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+
+    h5#noPrint
+    {
+        display: none;
+    }
+    table
+    {
+        width: 500px;
+        margin: auto;
+        border-collapse: collapse;
+    }
+    table > tbody > tr > td
+    {
+        border: black solid 1px;
+        min-width: 20px;
+        height: 40px;
+    }
+    table > caption
+    {
+        caption-side: bottom;
+    }
+
+
+
+    footer
+    {
+        display: none;
+    }
+  }
